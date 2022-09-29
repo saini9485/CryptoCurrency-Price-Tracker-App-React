@@ -1,3 +1,6 @@
+<h1>CryptoCurrency Price Tracker App</h1>
+
+<img src ="OutPut.png" alt ="image">
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
