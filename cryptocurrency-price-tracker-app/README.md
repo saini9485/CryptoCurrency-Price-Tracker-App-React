@@ -1,5 +1,5 @@
 <h1>CryptoCurrency Price Tracker App</h1>
-
+<img src ="output1.png" alt ="image">
 <img src ="OutPut.png" alt ="image">
 # Getting Started with Create React App
 

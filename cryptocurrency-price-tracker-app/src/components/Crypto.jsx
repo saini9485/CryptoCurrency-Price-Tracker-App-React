@@ -5,6 +5,7 @@ import axios from "axios";
 export function Crypto() {
   const [coins, setCoins] = useState([]);
   const [search, setSearch] = useState('');
+  const [toggle, setToggle] = useState(true);
   useEffect(() => {
     axios
       .get(
@@ -15,6 +16,13 @@ export function Crypto() {
         setCoins([...response.data]);
       });
   }, []);
+  if (toggle) {
+    document.body.style.backgroundColor = "white";
+    document.body.style.color = "black";
+  } else {
+    document.body.style.backgroundColor = "black";
+    document.body.style.color = "white";
+  }
 
 
   const handleChange = e => {
@@ -27,6 +35,17 @@ export function Crypto() {
 
   
   return (
+
+<>
+    <div className="DarkBtn">
+    {toggle ? (
+      <button onClick={() => setToggle(!toggle)} className="Togglebtn">DARK THEME</button>
+    ) : (
+      <button onClick={() => setToggle(!toggle)}className="Togglebtn1" >LIGHT THEME</button>
+    )}
+  </div>
+
+
     <div className='coin-app'>
       <div className='coin-search'>
         <h1 className='coin-text'>Search a currency</h1>
@@ -54,7 +73,8 @@ export function Crypto() {
           />
         );
       })}
-    </div>
+     
+    </div> </>
   );
 }
 
